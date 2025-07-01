@@ -80,5 +80,4 @@ Other models like **XGBoost** and **Logistic Regression** also performed well an
 ## 🧠 Insights
 - **Credit History** and **Debt-to-Income Ratio** were among the most influential features.
 - Tree-based models benefit from the non-linearity and feature interactions present in financial datasets.
-- SHAP analysis confirmed that features like `Credit_History`, `TotalIncome`, and `LoanAmount` contribute most significantly to model decisions.
 
