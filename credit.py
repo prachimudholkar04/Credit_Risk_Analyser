@@ -159,3 +159,15 @@ while True:
 best_model_row = results_df.loc[results_df[user_input].idxmax()]
 print(f"\n✅ Best Model Based on '{user_input}':")
 print(f"{best_model_row['Model']} with {user_input} = {best_model_row[user_input]:.4f}")
+
+
+print(df_test.columns)
+model = RandomForestClassifier()
+model.fit(X_train_scaled, y_train)
+y_pred = model.predict(X_test_scaled)
+
+print("Predicted Loan_Status (0 = No, 1 = Yes):")
+print(y_pred)
+
+# Optional: Save results
+pd.DataFrame({"Prediction": y_pred}).to_csv("test_predictions.csv", index=False)
